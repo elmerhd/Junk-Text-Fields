@@ -25,7 +25,10 @@ public class JunkTextField extends JTextField{
     public JunkTextField() {
         super();
     }
-
+    /**
+     * Constructor instance
+     * @param placeholder the placeholder
+     */
     public JunkTextField(String placeholder) {
         placeholder_comp = new Placeholder(placeholder, this);
         placeholder_comp.setForeground( Color.BLACK );
@@ -33,18 +36,33 @@ public class JunkTextField extends JTextField{
         placeholder_comp.initFontStyle(Font.PLAIN);
         
     }
+    /**
+     * Sets the placeholder
+     * @param placeholder the placeholder
+     */
     public void setPlaceHolder(String placeholder){
         placeholder_comp = new Placeholder(placeholder, this);
         placeholder_comp.setForeground(Color.BLACK);
         placeholder_comp.changeAlpha(0.5f);
         placeholder_comp.initFontStyle(Font.PLAIN);
     }
+    /**
+     * Sets the placeholder color
+     * @param col 
+     */
     public void setPlaceHolderColor(Color col){
         placeholder_comp.setForeground(col);
     }
+    /**
+     * Sets the placeholder font style
+     * @param font the font eg. Font.BOLD + Font.ITALIC
+     */
     public void setFontStyle(int font){
         placeholder_comp.initFontStyle(font);
     }
+    /**
+     * Sets the border to {@link com.junk.application.JunkTextField.RoundedCornerBorder}
+     */
     public void roundedBorderRadius(){
         this.setBorder(new RoundedCornerBorder());
     }
@@ -264,7 +282,9 @@ public class JunkTextField extends JTextField{
         @Override
         public void changedUpdate(DocumentEvent e) {}
     }
-    
+    /**
+     * A rounded corner border
+     */
     protected static class RoundedCornerBorder extends AbstractBorder {
         private static final Color ALPHA_ZERO = new Color(0x0, true);
         @Override public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
