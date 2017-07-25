@@ -16,7 +16,7 @@ import javax.swing.JTextField;
  * <code>JunkTextField</code> is a textfield that supports placeholder, rounded border and etc
  * 
  * @author Elmer Duron
- * @version 3.1
+ * @version 3
  */
 public class JunkTextField extends JTextField{
     private Placeholder placeholder_comp;
